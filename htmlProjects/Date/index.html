@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        console.log(Date.now());//1744271950281
+        console.log(new Date(1744271950281));
+        console.log(new Date());
+
+        console.log(new Date(1744271950281).getDate());
+        console.log(new Date(1744271950281).getDay());
+        console.log(new Date(1744271950281).getFullYear());
+        console.log(new Date(1744271950281).getMonth()+1);
+
+        var year = new Date().getFullYear();
+        var month = new Date().getMonth()+1;
+        var day = new Date().getDate();
+        var hour = new Date().getHours();
+
+        // console.log(year+"-"+month+"-"+day+"-"+hour);
+        
+        function getRemainingDaysInYear() {
+        var today = new Date(); // 获取当前日期
+        var endOfYear = new Date(today.getFullYear(), 11, 31,23,59,59,999); // 本年度最后一天
+        // const timeDifference = endOfYear - today; // 计算时间差（以毫秒为单位）
+        var msPerDay = 24*60*60*1000; // 每天的毫秒数
+        return Math.round((endOfYear.getTime()-today.getTime())/msPerDay); // 计算剩余天数
+        // const remainingDays = Math.ceil(timeDifference / (1000 * 60 * 60 * 24)); // 转换为天数
+        // return remainingDays;
+    }
+
+        console.log("本年度剩余天数:", getRemainingDaysInYear());
+    </script>
+</body>
+</html>

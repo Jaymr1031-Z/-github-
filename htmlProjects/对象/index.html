@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var user = {
+            name:"张三",
+            age:18,
+            sex:"男",
+            getName :function(name){
+                console.log(this.name + "的名字是" + name);
+            },
+            container:{
+                name:"李6",
+                backEnd:["python","java","php"]
+            }
+        }
+
+        //对象的读取:通过对象名.属性名  或者 对象名["属性名"]
+        console.log(user.name);
+        console.log(user["name"]);
+        
+
+        user.getName("李四");
+        console.log(user.container.name);
+        console.log(user.container.backEnd);
+        
+        
+    </script>
+</body>
+</html>

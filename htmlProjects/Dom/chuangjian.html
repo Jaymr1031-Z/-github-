@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="nav">导航</div>
+
+    <div id="container"></div>
+
+    <script>
+
+        var text = document.createElement("p");
+
+        var content = document.createTextNode("这是一个段落");
+
+        var id = document.createAttribute("id");
+
+        id.value = "root";
+
+        //appendChild  将内容或者子元素放在容器中
+        text.appendChild(content);//将文本内容放在p标签中
+
+        text.setAttributeNode(id);//将id属性放在p标签中
+
+        console.log(text);
+        console.log(content);
+        console.log(id);
+
+        var container = document.getElementById("container");//获取到容器
+
+        container.appendChild(text);//将p标签放在容器中
+        
+        
+
+        
+    </script>
+</body>
+</html>

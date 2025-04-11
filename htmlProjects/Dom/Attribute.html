@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+    </head>
+<body>
+
+    <div id="root" class="box">
+        <span style="display: none;">Hidden</span>
+        Visible
+      </div>
+    <script>
+        var root = document.getElementById("root");
+
+        root.id = "roots";
+
+        var div = document.getElementsByClassName("box")[0];
+
+        div.className = "boxClass";
+
+        root.classList.add("boxClass1");
+        root.classList.add("boxClass2");
+
+        root.classList.remove("boxClass1");
+        
+        root.classList.toggle("boxClass3");
+
+        root.classList.toggle("boxClass3");
+
+        var flag = root.classList.contains("boxClass3");
+        console.log(flag);//true
+        
+        var out = root.innerHTML;
+        console.log(out);
+
+        const div5 = document.getElementById("roots");
+
+        console.log(div5.innerText);  
+        console.log(div5.innerHTML);
+    </script>
+</body>
+</html>

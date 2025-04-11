@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">按钮</button>
+
+    <a href="https://www.baidu.com" id="baidu">baidu</a>
+
+    <script>
+
+        var btn = document.getElementById("btn");
+
+        btn.onclick = function(event){
+            event.target.innerHTML = "按钮被点击了";
+
+            console.log(event.type);
+        }
+        var baidu = document.getElementById("baidu");
+        baidu.onclick = function(event){
+            // event.preventDefault(); //阻止默认行为
+            console.log(event.type);
+            
+        }
+
+
+        </script>
+</body>
+</html>

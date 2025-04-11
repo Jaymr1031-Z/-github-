@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="www.baidu.com" id="myform" onsubmit="submitHandle">
+        <input type="text" name="username">
+        <button id="resetBrn">重置</button>
+        <button>提交表单</button>
+    </form>
+
+    <script>
+
+        var resetBrn = document.getElementById("resetBrn");
+        var myform = document.getElementById("myform");
+
+        resetBrn.addEventListener("click",function(){
+            myform.reset();//触发再表单上 清除表单数据
+        })
+        function submitHandle(){
+                console.log("想做的事情");
+                
+        }
+    </script>
+</body>
+</html>

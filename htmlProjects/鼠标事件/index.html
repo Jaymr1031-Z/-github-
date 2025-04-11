@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            overflow: auto;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="btn1">单击</button>
+    <button id="btn2">双击</button>
+    <button id="btn3">鼠标按下</button>
+    <button id="btn4">鼠标抬起</button>
+    <div id="btn5" class="box1"></div>
+    <div id="btn6" class="box1"></div>
+    <div id="btn7" class="box1"></div>
+    <div id="btn8" class="box1"></div>
+    <div id="scrollBox" class="box">
+        滚动鼠标滚轮试试！
+    </div>
+
+    <script>
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var btn3 = document.getElementById("btn3");
+        var btn4 = document.getElementById("btn4");
+        var btn5 = document.getElementById("btn5");
+        var btn6 = document.getElementById("btn6");
+        var btn7 = document.getElementById("btn7");
+        var btn8 = document.getElementById("btn8");
+        btn1.onclick = function(){
+            console.log("单击事件被触发了");
+        }
+
+        btn2.ondblclick = function(){
+            console.log("双击事件被触发了");
+        }
+        btn3.onmousedown = function(){
+            console.log("鼠标按下事件被触发了");
+        }
+        btn4.onmouseup = function(){
+            console.log("鼠标抬起事件被触发了");
+        }
+        btn5.onmouseover = function(){
+            console.log("鼠标移入事件被触发了");
+        }
+        btn6.onmousemove = function(){
+            console.log("鼠标移动事件被触发了");
+        }
+        btn7.onmouseenter = function(){
+            console.log("鼠标进入事件被触发了");
+        }
+        btn8.onmouseleave = function(){
+            console.log("鼠标离开事件被触发了");
+        }
+
+        var scrollBox = document.getElementById("scrollBox");
+
+        scrollBox.addEventListener("wheel", function(event) {
+            console.log("鼠标滚轮事件被触发了");
+            console.log("滚动方向:", event.deltaY > 0 ? "向下" : "向上");
+            console.log("滚动距离:", event.deltaY);
+
+            // 阻止默认滚动行为（可选）
+            event.preventDefault();
+        });
+    </script>
+
+
+</body>
+</html>

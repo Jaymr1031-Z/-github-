@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            /* width: 500px;
+            height: 120px; */
+            background-color: #555;
+            overflow: hidden;
+            /*clear: both; /* 2.container在text外面   清除浮动 不设置父元素宽高 父元素不塌陷 */;
+        }
+        .container:after{
+            /*表示伪元素没有任何可见内容*/
+            content: '';
+            
+            /*将伪元素的显示模式设置为块级元素（block-level element）。
+            块级元素会独占一行，并扩展到父容器的宽度。
+            这确保了伪元素能够正确地影响布局，从而实现清除浮动的效果。*/
+            display: block;
+
+
+            clear: both;
+        }/*伪对象  不用设置 父元素宽高 父元素不塌陷 */
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            margin: 5px;
+            float: left;
+        }
+        .text{
+            width: 100px;
+            height: 100px;
+            background-color: #aa3990;
+            /* clear: both; 1.text在container里面   清除浮动 */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        
+    </div>
+    <div class="text"></div>
+
+</body>
+</html>
